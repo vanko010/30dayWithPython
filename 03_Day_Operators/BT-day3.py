@@ -1,3 +1,4 @@
+import math
 #Câu 1
 age = 100.1010
 age = int(age)
@@ -31,3 +32,25 @@ c=float(c)
 perimeter=a + b +c
 p=int(perimeter)
 print("The perimeter of the triangle is",p)
+
+#Câu 6
+lenght = input("Nhập chiều dài:")
+l = float(lenght)
+heght = input("Nhập chiều rộng:")
+h = float(heght)
+dientich = l*h
+chuvi= 2 *(l+h)
+print("Chu vi HCM là",chuvi)
+print("Diện tích HCN là",dientich)
+
+#Câu 7
+r = input("Bán kính là")
+r = float(r)
+dientich=(math.pi * r *r )
+chuvi = (2 *math.pi*r)
+print("Diện tích",dientich)
+print("Chu vi:",chuvi)
+
+#
+for n in range(1, 6):
+    print(f"{n}   {n**0}    {n**1}    {n**2}    ")
