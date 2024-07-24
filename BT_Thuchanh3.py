@@ -18,16 +18,18 @@ for soluong in range(soluongdb):
                 }
     db.append(danhsach)
 
-def checkgiong(str1,str2):
-    return difflib.SequenceMatcher(None,str1,str2).ratio()
+def checkgiong(str1, str2):
+    return difflib.SequenceMatcher(None, str1, str2).ratio()
 timkiem = input("Nhập thông tin tìm kiếm:")
 timkiem1 = timkiem.split()
+timkiem1 = str(timkiem1)
 for danhsach in db:
-    hoten=danhsach["lastname"]+""+danhsach["firstname"]
+    hoten=danhsach["lastname"]+""+ danhsach["firstname"]
     hoten1= hoten.split()
-    sshovaten= checkgiong(timkiem1,hoten1)
+    hoten1=str(hoten1)
+    sshovaten= checkgiong(timkiem1, hoten1)
     if sshovaten >= 0.5:
         print("Độ giống nhau của thông tin tìm kiếm:", sshovaten)
-        for key,value in danhsach.items():
-          if value.strip():
-             print(f"{key}:{value}")
+        for key, value in danhsach.items():
+            if value.strip():
+                print(f"{key}:{value}")
