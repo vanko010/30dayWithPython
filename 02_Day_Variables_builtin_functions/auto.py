@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 
 # Specify the path to chromedriver.exe
-driver = webdriver.Chrome(executable_path='C:\\Users\\doanv\\Downloads\\chrome-win64\\chromedriver.exe')
+driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
 
 # Truy cập trang web
 driver.get("https://support.pavietnam.vn")
